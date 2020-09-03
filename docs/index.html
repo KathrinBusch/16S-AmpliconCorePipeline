@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Source Code collection : Deep-sea sponge microbiome project | Source Code collection :   Deep-sea sponge microbiome project</title>
+  <meta name="description" content="Source Code collection :  Deep-sea sponge microbiome project" />
+  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Source Code collection : Deep-sea sponge microbiome project | Source Code collection :   Deep-sea sponge microbiome project" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Source Code collection : Deep-sea sponge microbiome project | Source Code collection :   Deep-sea sponge microbiome project" />
+  
+  
+  
+
+<meta name="author" content="Kathrin Busch" />
+
+
+<meta name="date" content="2020-09-03" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="cover.png" type="image/x-icon" />
+
+<link rel="next" href="s-amplicon-core-analyses.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/font-awesome-5.13.0/js/script.js"></script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><img src="cover.png" width="280"></a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#section"></a></li>
+<li><a href="s-amplicon-core-analyses.html#s-amplicon-core-analyses"><br> 16S Amplicon Core Analyses</a><ul>
+<li class="chapter" data-level="0.1" data-path="s-amplicon-core-analyses.html"><a href="s-amplicon-core-analyses.html"><i class="fa fa-check"></i><b>0.1</b> Getting started</a></li>
+<li class="chapter" data-level="0.2" data-path="s-amplicon-core-analyses.html"><a href="s-amplicon-core-analyses.html#remove-heterogeneiety-spacers-and-primers"><i class="fa fa-check"></i><b>0.2</b> Remove heterogeneiety spacers and primers</a></li>
+<li class="chapter" data-level="0.3" data-path="s-amplicon-core-analyses.html"><a href="s-amplicon-core-analyses.html#visualise-sequence-quality-and-determine-truncation-length"><i class="fa fa-check"></i><b>0.3</b> Visualise sequence quality and determine truncation length</a></li>
+<li class="chapter" data-level="0.4" data-path="s-amplicon-core-analyses.html"><a href="s-amplicon-core-analyses.html#trimming-truncation-chimera-removal-and-denoising-dada2-algorithm"><i class="fa fa-check"></i><b>0.4</b> Trimming, truncation, chimera removal and denoising (DADA2 algorithm)</a></li>
+<li class="chapter" data-level="0.5" data-path="s-amplicon-core-analyses.html"><a href="s-amplicon-core-analyses.html#taxonomic-classification-using-primer-specific-naïve-bayes-classifier-created-on-silva-database-and-taxonomy-based-filtering"><i class="fa fa-check"></i><b>0.5</b> Taxonomic classification (using primer-specific Naïve Bayes classifier created on SILVA database) and taxonomy-based filtering</a></li>
+<li class="chapter" data-level="0.6" data-path="s-amplicon-core-analyses.html"><a href="s-amplicon-core-analyses.html#set-min-frequency-and-subsample-based-on-sequence-frequency"><i class="fa fa-check"></i><b>0.6</b> Set min-frequency and subsample based on sequence frequency</a></li>
+<li class="chapter" data-level="0.7" data-path="s-amplicon-core-analyses.html"><a href="s-amplicon-core-analyses.html#visualise-filtering-steps-and-denoising-stats"><i class="fa fa-check"></i><b>0.7</b> Visualise Filtering steps and Denoising stats</a></li>
+<li class="chapter" data-level="0.8" data-path="s-amplicon-core-analyses.html"><a href="s-amplicon-core-analyses.html#create-phylogenetic-backbone-tree-and-compute-core-diversity-metrics"><i class="fa fa-check"></i><b>0.8</b> Create phylogenetic backbone tree and compute core-diversity metrics</a></li>
+<li class="chapter" data-level="0.9" data-path="s-amplicon-core-analyses.html"><a href="s-amplicon-core-analyses.html#compute-rarefaction-curves"><i class="fa fa-check"></i><b>0.9</b> Compute rarefaction curves</a></li>
+<li class="chapter" data-level="0.10" data-path="s-amplicon-core-analyses.html"><a href="s-amplicon-core-analyses.html#export-clustering-dendrogram"><i class="fa fa-check"></i><b>0.10</b> Export clustering dendrogram</a></li>
+<li class="chapter" data-level="0.11" data-path="s-amplicon-core-analyses.html"><a href="s-amplicon-core-analyses.html#data-crunching-for-format-compatibility"><i class="fa fa-check"></i><b>0.11</b> Data crunching for format compatibility</a><ul>
+<li class="chapter" data-level="0.11.1" data-path="s-amplicon-core-analyses.html"><a href="s-amplicon-core-analyses.html#export-asv-table"><i class="fa fa-check"></i><b>0.11.1</b> Export ASV Table</a></li>
+<li class="chapter" data-level="0.11.2" data-path="s-amplicon-core-analyses.html"><a href="s-amplicon-core-analyses.html#export-taxonomy-table"><i class="fa fa-check"></i><b>0.11.2</b> Export Taxonomy Table</a></li>
+<li class="chapter" data-level="0.11.3" data-path="s-amplicon-core-analyses.html"><a href="s-amplicon-core-analyses.html#export-metadata-file"><i class="fa fa-check"></i><b>0.11.3</b> Export Metadata file</a></li>
+<li class="chapter" data-level="0.11.4" data-path="s-amplicon-core-analyses.html"><a href="s-amplicon-core-analyses.html#export-unifrac-matrix"><i class="fa fa-check"></i><b>0.11.4</b> Export UniFrac Matrix</a></li>
+<li class="chapter" data-level="0.11.5" data-path="s-amplicon-core-analyses.html"><a href="s-amplicon-core-analyses.html#create-local-blastable-database-of-representative-sequences"><i class="fa fa-check"></i><b>0.11.5</b> Create local blastable database of representative sequences</a></li>
+<li class="chapter" data-level="0.11.6" data-path="s-amplicon-core-analyses.html"><a href="s-amplicon-core-analyses.html#export-table-with-relative-abundances-on-phylum-levels"><i class="fa fa-check"></i><b>0.11.6</b> Export table with relative abundances on phylum levels</a></li>
+<li class="chapter" data-level="0.11.7" data-path="s-amplicon-core-analyses.html"><a href="s-amplicon-core-analyses.html#export-data-for-svampex-clean-up"><i class="fa fa-check"></i><b>0.11.7</b> Export data for SVAmpEx &amp; Clean-up</a></li>
+</ul></li>
+<li class="chapter" data-level="0.12" data-path="s-amplicon-core-analyses.html"><a href="s-amplicon-core-analyses.html#diversity-indices"><i class="fa fa-check"></i><b>0.12</b> Diversity indices</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Source Code collection : <br> Deep-sea sponge microbiome project</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Source Code collection : <br> Deep-sea sponge microbiome project</h1>
+<p class="author"><em>Kathrin Busch</em></p>
+<p class="date"><em>2020-09-03</em></p>
+</div>
+<div id="section" class="section level1 unnumbered">
+<h1></h1>
+<p>Please cite the <a href="https://doi.org/10.5194/bg-2020-15">original article of Busch et al. 2020</a>.</p>
+<p><img src="cover.png" alt="png" />
+Illustrated by Kathrin Busch</p>
+<style type="text/css">
+
+body{ /* Normal  */
+      font-size: 18px;
+      color: Black;
+  }
+td {  /* Table  */
+  font-size: 8px;
+}
+h1.title {
+  font-size: 58px;
+  color: #8195cc;
+}
+h1 { /* Header 1 */
+  font-size: 40px;
+  color: #8195cc;
+}
+h2 { /* Header 2 */
+    font-size: 22px;
+  color: #e5e5e5;
+}
+h3 { /* Header 3 */
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  color: #e5e5e5;
+}
+code.r{ /* Code block */
+    font-size: 12px;
+}
+pre { /* Code block - determines code spacing between lines */
+    font-size: 14px;
+}
+</style>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="s-amplicon-core-analyses.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["core_amplicon.pdf", "core_amplicon.epub", "core_amplicon.html"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
