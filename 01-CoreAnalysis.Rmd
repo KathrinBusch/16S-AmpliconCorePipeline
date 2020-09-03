@@ -1,5 +1,11 @@
 # <br> 16S Amplicon Core Analyses {-}
 
+## Workflow diagram 
+This documentation includes the core bioinformatic SOP developed within the deep-sea sponge microbiome project.
+The very basic workflow looks like this:
+
+![png](input_structure.png)\
+
 ## Getting started 
 Operated from Ubuntu 14.04.6 LTS (GNU/Linux 4.4.0-148-generic x86_64) command line.
 
