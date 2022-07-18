@@ -12,7 +12,7 @@ favicon: cover.png
 ---
 
 # {-}
-Please cite the [original article of Busch et al. 2022](https://www.nature.com/ncomms/).
+Please cite the [original article of Busch et al. 2022 published in Nature communications](https://orcid.org/0000-0001-7621-998X).
 
 ![png](cover.png)
 Illustrated by Kathrin Busch
