@@ -1,0 +1,8 @@
+#!/bin/bash
+cd $PWDa/dada2/
+unzip dada2-denoising-stats.qza
+cd "$(\ls -1dt ./*/ | head -n 1)/data"   
+sed '1 s/ /_/g'  stats.tsv >stats2.tsv
+sed -e 's/,/\t/g' stats2.tsv > tmpfile; mv tmpfile stats.txt 
+sed 2d stats.txt > stats3.txt
+sed '1 s/-/_/g'  stats3.txt >stats4.txt

@@ -1,0 +1,5 @@
+#!/bin/bash
+rm -r -f -- - -d */    
+var=`cat min-frequency.txt`
+echo $var
+cd $PWDa/

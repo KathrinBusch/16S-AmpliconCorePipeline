@@ -1,0 +1,6 @@
+#!/bin/bash
+cd $PWDa/dada2/
+awk 'BEGIN {max = 0} {if ($2>max) max=$2} END {print max}' sample-frequency-detail.txt > max.txt
+int=`cat max.txt`
+variable=${int%.*}
+echo $variable

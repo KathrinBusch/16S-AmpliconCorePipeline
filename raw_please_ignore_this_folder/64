@@ -1,0 +1,10 @@
+#!/bin/bash
+sed 's/"//g' alpha_diversity.txt > alpha_diversity_indices.txt
+cp alpha_diversity_indices.txt $PWDa/R/alpha_diversity_indices.txt
+rm -r -f -- - eveness.txt
+rm -r -f -- - faith_pd_vector.txt
+rm -r -f -- - observed_otus_vector.txt
+rm -r -f -- - shannon_vector.txt
+rm -r -f -- - alpha_diversity.txt
+rm -r -f -- - alpha_diversity_indices.txt
+cd $PWDa/R/

@@ -1,0 +1,21 @@
+#!/bin/bash
+cd $PWDa/R/
+rm -- - dada2-tablenochloroplastsmitochondriaUnassigned$var.qza
+rm -- - weighted_unifrac_distance_matrix.qza
+rm -r -f -- - taxtable
+rm -r -f -- - taxonomy
+rm -- - metadataV34.txt
+rm -- - list_of_remaining_samples.txt
+rm -- - dada2-rep-seqs.qza
+rm -r -f -- - fin.txt
+rm -r -f -- - fin2.txt
+rm -r -f -- - fin3.txt
+rm -r -f -- - fin4.txt
+rm -r -f -- - -d */
+cd $PWDa/
+mkdir svampex
+cd $PWDa/svampex
+mkdir taxonomy
+cd $PWDa/R
+cp -r "phylum_relabund.txt" $PWDa/svampex/taxonomy
+cd $PWDa/svampex/taxonomy

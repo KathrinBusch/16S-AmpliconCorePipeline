@@ -1,0 +1,19 @@
+#!/bin/bash
+unzip dada2-tablenochloroplastsmitochondria.qzv
+cd "$(\ls -1dt ./*/ | head -n 1)/data"   
+sed -e 's/,/\t/g' sample-frequency-detail.csv > tmpfile; mv tmpfile sample-frequency-detail.txt 
+sed -i '1i sample-id nomitochondria' sample-frequency-detail.txt 
+mv sample-frequency-detail.txt  3stats.txt
+cp -r "3stats.txt" $PWDa/dada2/
+cd $PWDa/dada2/
+unzip dada2-tablenochloroplastsmitochondriaUnassigned.qzv
+cd "$(\ls -1dt ./*/ | head -n 1)/data"   
+sed -e 's/,/\t/g' sample-frequency-detail.csv > tmpfile; mv tmpfile sample-frequency-detail.txt 
+sed -i '1i sample-id nounassigned' sample-frequency-detail.txt 
+mv sample-frequency-detail.txt  4stats.txt
+cp -r "4stats.txt" $PWDa/dada2/
+cd $PWDa/dada2/
+unzip dada2-tablenochloroplastsmitochondriaUnassigned$var.qzv
+cd "$(\ls -1dt ./*/ | head -n 1)/data"   
+sed -e 's/,/\t/g' sample-frequency-detail.csv > tmpfile; mv tmpfile sample-frequency-detail.txt 
+sed -i '1i sample-id samplingdepth' sample-frequency-detail.txt 

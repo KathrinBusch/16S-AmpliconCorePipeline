@@ -1,0 +1,5 @@
+#!/bin/bash
+cd $PWDb/
+gunzip *.gz
+grep -e ">" SILVA_138_SSURef_NR99_tax_silva.fasta >  taxonomy.txt
+sed -e 's/\s\+/_/g' taxonomy.txt > modified_taxonomy.txt

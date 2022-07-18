@@ -1,0 +1,35 @@
+#!/bin/bash
+rm -r -f -- - phylum_tidlyformat.txt
+rm -r -f -- - metadataforR.txt
+cd $PWDa/
+mv $PWDa/trimmed $PWDa/dada2/trimmed
+cd $PWDa/dada2/core-metrics-results/
+unzip evenness_vector.qza
+cd "$(\ls -1dt ./*/ | head -n 1)/data"                           
+sed 's|,|\t|g' alpha-diversity.tsv > eveness.txt
+sed -i '1s/^/SampleID /' eveness.txt
+cp eveness.txt $PWDa/dada2/eveness.txt
+cd $PWDa/dada2/core-metrics-results/
+rm -r -f -- - -d */   
+unzip faith_pd_vector.qza
+cd "$(\ls -1dt ./*/ | head -n 1)/data"                        
+sed 's|,|\t|g' alpha-diversity.tsv > faith_pd_vector.txt
+sed -i '1s/^/SampleID /' faith_pd_vector.txt
+cp faith_pd_vector.txt $PWDa/dada2/faith_pd_vector.txt 
+cd $PWDa/dada2/core-metrics-results/
+rm -r -f -- - -d */   
+unzip observed_otus_vector.qza
+cd "$(\ls -1dt ./*/ | head -n 1)/data"                           
+sed 's|,|\t|g' alpha-diversity.tsv > observed_otus_vector.txt
+sed -i '1s/^/SampleID /' observed_otus_vector.txt
+cp observed_otus_vector.txt $PWDa/dada2/observed_otus_vector.txt
+cd $PWDa/dada2/core-metrics-results/
+rm -r -f -- - -d */   
+unzip shannon_vector.qza
+cd "$(\ls -1dt ./*/ | head -n 1)/data"                           
+sed 's|,|\t|g' alpha-diversity.tsv > shannon_vector.txt
+sed -i '1s/^/SampleID /' shannon_vector.txt
+cp shannon_vector.txt $PWDa/dada2/shannon_vector.txt
+cd $PWDa/dada2/core-metrics-results/
+rm -r -f -- - -d */   
+cd $PWDa/dada2/

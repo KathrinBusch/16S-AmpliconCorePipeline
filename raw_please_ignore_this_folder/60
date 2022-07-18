@@ -1,0 +1,8 @@
+#!/bin/bash
+rm -r -f -- - phylum_relabund.txt
+cd $PWDa/svampex
+mkdir amplitudes
+cd $PWDa/R
+cp -r "phylum_tidlyformat.txt" $PWDa/svampex/amplitudes
+cp -r "metadataforR.txt" $PWDa/svampex/amplitudes
+cd $PWDa/svampex/amplitudes

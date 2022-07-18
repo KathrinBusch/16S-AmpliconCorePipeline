@@ -1,0 +1,4 @@
+#!/bin/bash
+sed 's/"//g' 0stats.txt > 1stats.txt
+cp -r "1stats.txt" $PWDa/dada2/
+cd $PWDa/dada2/

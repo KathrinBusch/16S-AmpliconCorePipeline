@@ -1,0 +1,3 @@
+#!/bin/bash
+cp -r "taxonomyforR.txt" $PWDa/R/
+cd $PWDa/R/

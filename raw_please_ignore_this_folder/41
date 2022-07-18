@@ -1,0 +1,11 @@
+#!/bin/bash
+rm -r -f -- - max.txt
+rm -r -f -- - observed_otus.txt
+rm -r -f -- - observed_otus2.txt
+rm -r -f -- - raref2.txt
+rm -r -f -- - raref.txt
+rm -r -f -- - observed_otusN.txt
+rm -r -f -- - raref_sub2.txt
+rm -r -f -- - raref_sub.txt
+cd $PWDa/dada2/core-metrics-results/
+rm -r -f -- - -d */

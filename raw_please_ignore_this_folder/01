@@ -1,0 +1,6 @@
+#!/bin/bash
+PWDa=`cat path_experiment.txt`
+echo $PWDa
+PWDb=`cat path_taxonomy.txt`
+echo $PWDb
+cd $PWDa/manually_created/

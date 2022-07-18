@@ -1,0 +1,12 @@
+#!/bin/bash
+sed 's/"//' taxonomy_7levels.txt > taxonomy_7_levels.txt
+sed 's/"$//' taxonomy_7_levels.txt > taxonomy_7_levels_fin.txt
+rm -r -f -- -taxonomy_7_levels.txt
+rm -r -f -- -taxonomy_7levels.txt
+rm -r -f -- -modified_taxonomy.txt
+rm -r -f -- -taxonomy.txt
+sed 's/ /'$'\t''/' taxonomy_7_levels_fin.txt >taxonomy_7_levels.txt
+rm -r -f -- -taxonomy_7_levels_fin.txt
+sed '/>/s/\s.*// ' SILVA_138_SSURef_NR99_tax_silva.fasta>silva_138_99_fin.fasta
+sed '/^>/! s/[U]/\T/g' silva_138_99_fin.fasta > silva_138_99.fasta
+rm -r -f -- -  silva_138_99_fin.fasta

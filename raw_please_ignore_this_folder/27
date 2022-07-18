@@ -1,0 +1,20 @@
+#!/bin/bash
+mv sample-frequency-detail.txt  5stats.txt
+cp -r "5stats.txt" $PWDa/dada2/
+cp -r "sample_read_count_min_at_seq_depth.txt" $PWDa/dada2/
+cd $PWDa/dada2/
+wc -l 5stats.txt > temp.txt
+cut -d' ' -f1 temp.txt 
+vari=$(cut -d' ' -f1 temp.txt )
+echo "$(($vari-1))" > sample_number_end.txt
+wc -l 1stats.txt > temp2.txt
+cut -d' ' -f1 temp2.txt 
+varis=$(cut -d' ' -f1 temp2.txt )
+echo "$(($varis-1))" > sample_number_start.txt
+rm -r -f -- - 5stats.txt
+rm -r -f -- - temp.txt
+rm -r -f -- - temp2.txt
+sed '1 s/\-/_/g'  1stats.txt > 1stats2.txt
+sed '1 s/\-/_/g'  2stats.txt > 2stats2.txt
+sed '1 s/\-/_/g'  3stats.txt > 3stats2.txt
+sed '1 s/\-/_/g'  4stats.txt > 4stats2.txt

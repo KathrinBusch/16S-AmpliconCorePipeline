@@ -1,0 +1,9 @@
+#!/bin/bash
+unzip dada2-tablenochloroplasts.qzv
+cd "$(\ls -1dt ./*/ | head -n 1)/data"   
+sed -e 's/,/\t/g' sample-frequency-detail.csv > tmpfile; mv tmpfile sample-frequency-detail.txt 
+sed -i '1i sample-id nochloroplasts' sample-frequency-detail.txt 
+mv sample-frequency-detail.txt  2stats.txt
+cp -r "2stats.txt" $PWDa/dada2/
+cd $PWDa/dada2/
+

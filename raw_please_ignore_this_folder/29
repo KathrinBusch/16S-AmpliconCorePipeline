@@ -1,0 +1,21 @@
+#!/bin/bash
+sed 's/"//g' denoising_absolute.txt > sample_denoising_absolute.txt
+sed 's/"//g' denoising_relative.txt > sample_denoising_relative.txt
+rm -r -f -- - 1stats.txt
+rm -r -f -- - 1stats2.txt
+rm -r -f -- - 2stats.txt
+rm -r -f -- - 2stats2.txt
+rm -r -f -- - 3stats.txt
+rm -r -f -- - 3stats2.txt
+rm -r -f -- - 4stats.txt
+rm -r -f -- - 4stats2.txt
+rm -r -f -- - denoising_absolute.txt
+rm -r -f -- - denoising_relative.txt
+rm -r -f -- - -d */             
+unzip dada2-tablenochloroplastsmitochondriaUnassigned$var.qzv
+cd "$(\ls -1dt ./*/ | head -n 1)/data"   
+sed -e 's/,/\t/g' feature-frequency-detail.csv > tmpfile; mv tmpfile feature-frequency-detail.txt 
+sed -i '1i FeatureID frequency' feature-frequency-detail.txt 
+cp -r "feature-frequency-detail.txt" $PWDa/dada2/
+cd $PWDa/dada2/
+rm -r -f -- - -d */ 

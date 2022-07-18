@@ -1,0 +1,5 @@
+#!/bin/bash
+cp sequence_quality.pdf $PWDa/dada2/sequence_quality.pdf
+cd $PWDa/dada2
+rm -r -f -- - -d */    
+cd $PWDa/

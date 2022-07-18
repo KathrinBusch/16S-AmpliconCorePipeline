@@ -1,0 +1,7 @@
+#!/bin/bash
+cp -r "list_of_remaining_samples.txt" $PWDa/R/
+cd $PWDa/
+cp -r "metadataV34.txt" $PWDa/R/
+cd $PWDa/R/
+awk -F, -v OFS="," '{gsub(/ /,"")}1' metadataV34.txt > tmpfile; mv tmpfile metadataV34.txt
+awk -F, -v OFS="," '{gsub(/#/,"")}1' metadataV34.txt > tmpfile; mv tmpfile metadataV34.txt

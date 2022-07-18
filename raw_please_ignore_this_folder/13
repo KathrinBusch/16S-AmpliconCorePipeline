@@ -1,0 +1,8 @@
+#!/bin/bash
+rm -r -f -- -silva138V3V4-ref-seqs.qza
+rm -r -f -- -silva138-ref-taxonomy.qza
+rm -r -f -- -silva_138_99.qza
+rm -r -f -- -silva_138_99.fasta
+rm -r -f -- -taxonomy_7_levels.txt
+rm -r -f -- -SILVA_138_SSURef_NR99_tax_silva.fasta
+cd $PWDa/

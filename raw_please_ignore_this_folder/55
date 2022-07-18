@@ -1,0 +1,5 @@
+#!/bin/bash
+sed -i -e 's/p__//g' fin.txt
+echo "__" | awk '{ gsub ("__", "Unclassified", $0); print}' fin.txt > fin2.txt
+sed "s/([^)]*)/()/g" fin2.txt > fin3.txt
+cat fin3.txt | tr -d '()' > fin4.txt

@@ -1,0 +1,5 @@
+#!/bin/bash
+cd $PWDa/R/taxtable/collapsed_table/
+biom convert -i feature-table.biom -o table.tsv --to-tsv
+sed '1d' table.tsv > tmpfile; mv tmpfile table.txt 
+cut -d$'\t' -f2- table.txt  > table2.txt

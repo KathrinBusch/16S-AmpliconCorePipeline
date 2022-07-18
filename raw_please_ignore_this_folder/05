@@ -1,0 +1,7 @@
+#!/bin/bash
+cd $PWDa/dada2
+unzip single-end-demux.qzv
+cd "$(\ls -1dt ./*/ | head -n 1)/data"                           
+sed 's|,|\t|g' forward-seven-number-summaries.csv > forward-seven-number-summaries.txt
+sed -i '1s/^/sequence_base /' forward-seven-number-summaries.txt
+cp forward-seven-number-summaries.txt $PWDa/dada2/forward-seven-number-summaries.txt

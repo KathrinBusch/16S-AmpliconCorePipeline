@@ -1,0 +1,22 @@
+#!/bin/bash
+cd $PWDa/
+mkdir R
+cd $PWDa/dada2/core-metrics-results
+unzip beta-rarefaction-upgma.qzv
+cd "$(\ls -1dt ./*/ | head -n 1)/data"                           
+cp sample-clustering-upgma.tre $PWDa/R/sample-clustering-upgma.tre
+cd $PWDa/dada2/core-metrics-results
+rm -r -f -- - -d */    
+cd $PWDa/dada2/
+cp -r "dada2-tablenochloroplastsmitochondriaUnassigned$var.qza" $PWDa/R/
+cd $PWDa/R/
+unzip dada2-tablenochloroplastsmitochondriaUnassigned$var.qza
+cd "$(\ls -1dt ./*/ | head -n 1)/data"                         
+biom convert -i feature-table.biom -o table.tsv --to-tsv
+sed '1d' table.tsv > tmpfile; mv tmpfile table.txt 
+sed -e '1s/#OTU ID/Feature ID/' table.txt > tmpfile; mv tmpfile tableforR.txt 
+cp -r "tableforR.txt" $PWDa/R/
+cd $PWDa/R/
+echo "Feature ID" | awk '{ gsub (" ", "", $0); print}' tableforR.txt > tableforR2.txt
+rm -r -f -- - tableforR.txt
+mv tableforR2.txt tableforR.txt

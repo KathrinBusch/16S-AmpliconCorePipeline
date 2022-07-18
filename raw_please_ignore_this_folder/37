@@ -1,0 +1,10 @@
+#!/bin/bash
+sed 's/"//g' raref_sub.txt > raref_sub2.txt
+cd $PWDa/dada2/core-metrics-results/
+unzip alpha-rarefaction_complete.qzv 
+cd "$(\ls -1dt ./*/ | head -n 1)/data"   
+sed '1 s/-//g'  observed_otus.csv > observed_otus2.csv
+sed -e 's/,/\t/g' observed_otus2.csv > tmpfile; mv tmpfile observed_otus.txt
+cp -r "observed_otus.txt" $PWDa/dada2/
+cd $PWDa/dada2/
+awk 'BEGIN { FS = OFS = "\t" } { for(i=1; i<=NF; i++) if($i ~ /^ *$/) $i = 0 }; 1' observed_otus.txt > observed_otusN.txt

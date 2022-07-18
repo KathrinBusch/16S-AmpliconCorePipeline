@@ -1,0 +1,21 @@
+#!/bin/bash
+cd $PWDa/dada2/core-metrics-results/
+unzip bray_curtis_distance_matrix.qza
+cd "$(\ls -1dt ./*/ | head -n 1)/data"
+sed -e 's/,/\t/g' distance-matrix.tsv > tmpfile; mv tmpfile bray_curtis_distance_matrix.txt 
+cp -r "bray_curtis_distance_matrix.txt" $PWDa/R/
+cd $PWDa/dada2/core-metrics-results/
+rm -r -f -- - -d */   
+unzip jaccard_distance_matrix.qza
+cd "$(\ls -1dt ./*/ | head -n 1)/data"
+sed -e 's/,/\t/g' distance-matrix.tsv > tmpfile; mv tmpfile jaccard_distance_matrix.txt 
+cp -r "jaccard_distance_matrix.txt" $PWDa/R/
+cd $PWDa/dada2/core-metrics-results/
+rm -r -f -- - -d */   
+unzip unweighted_unifrac_distance_matrix.qza
+cd "$(\ls -1dt ./*/ | head -n 1)/data"
+sed -e 's/,/\t/g' distance-matrix.tsv > tmpfile; mv tmpfile unweighted_unifrac_distance_matrix.txt 
+cp -r "unweighted_unifrac_distance_matrix.txt" $PWDa/R/
+cd $PWDa/dada2/core-metrics-results/
+rm -r -f -- - -d */   
+cd $PWDa/R/

@@ -1,0 +1,17 @@
+#!/bin/bash
+cd $PWDa/dada2/core-metrics-results/
+cp -r "weighted_unifrac_distance_matrix.qza" $PWDa/R/
+cd $PWDa/R/
+unzip weighted_unifrac_distance_matrix.qza
+cd "$(\ls -1dt ./*/ | head -n 1)/data"                      
+sed -e 's/,/\t/g' distance-matrix.tsv > tmpfile; mv tmpfile weighted_unifrac_distance_matrix.txt 
+cp -r "weighted_unifrac_distance_matrix.txt" $PWDa/R/
+cd $PWDa/dada2/
+cp -r "dada2-rep-seqs.qza" $PWDa/R/
+cd $PWDa/R/
+unzip dada2-rep-seqs.qza
+cd "$(\ls -1dt ./*/ | head -n 1)/data"                    
+cp -r "dna-sequences.fasta" $PWDa/R/
+cd $PWDa/R/
+makeblastdb -in dna-sequences.fasta -dbtype nucl -out RepresentativeSequencesDatabase
+cd $PWDa/R/

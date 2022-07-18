@@ -1,0 +1,18 @@
+#!/bin/bash
+sed 's/"//g' metadataV34.txt > $PWDa/metadataV34.txt
+cp $PWDa/manually_created/pre-33-manifestV34.csv $PWDa/pre-33-manifestV34.csv
+rm -r -f -- - metadataV34.txt
+
+source activate qiime2-2019.10
+
+cd $PWDa/
+mkdir trimmed
+cd $PWDa/reads/
+
+for i in *_R1_001.fastq
+do
+cutadapt -g CCTACGGGAGGCAGCAG -o $PWDa/trimmed/$i $i
+done
+
+cd $PWDa/
+mkdir dada2

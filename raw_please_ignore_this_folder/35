@@ -1,0 +1,8 @@
+#!/bin/bash
+cd $PWDa/dada2/core-metrics-results/
+unzip alpha-rarefaction.qzv
+cd "$(\ls -1dt ./*/ | head -n 1)/data"   
+sed '1 s/-//g'  observed_otus.csv > observed_otus2.csv
+sed -e 's/,/\t/g' observed_otus2.csv > tmpfile; mv tmpfile observed_otus2.txt
+cp -r "observed_otus2.txt" $PWDa/dada2/
+cd $PWDa/dada2/

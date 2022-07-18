@@ -1,0 +1,3 @@
+#!/bin/bash
+cd $PWDa/R/taxonomy/
+awk -F, -v OFS="," '{gsub(/ /,"",$Taxon)}1' taxonomy.tsv > tmpfile; mv tmpfile taxonomy.txt
