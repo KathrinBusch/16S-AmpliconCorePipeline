@@ -1,7 +1,7 @@
 --- 
 title: "Source Code collection : <br> Deep-sea sponge microbiome project"
 author: "Kathrin Busch"
-date: "2020-09-03"
+date: "2022-07-18"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
@@ -12,7 +12,7 @@ favicon: cover.png
 ---
 
 # {-}
-Please cite the [original article of Busch et al. 2020](https://doi.org/10.5194/bg-2020-15).
+Please cite the [original article of Busch et al. 2022](https://www.nature.com/ncomms/).
 
 ![png](cover.png)
 Illustrated by Kathrin Busch
