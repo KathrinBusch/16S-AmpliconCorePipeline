@@ -5,5 +5,5 @@ Busch, K., Slaby, B. M., Bach, W., Boetius, A., Clefsen, I., Colaço, A., Creeme
  <br />
   <br />
  <br />
-The code has also been archived as a stand-alone application under [![GitHub license](https://badgen.net/badge/license/MIT/blue?)](https://github.com/KathrinBusch/16S-AmpliconCorePipeline/blob/master/LICENSE) [![Latest release](https://badgen.net/badge/release/v1.0.0/blue?)](https://github.com/KathrinBusch/16S-AmpliconCorePipeline/releases)
+The code has also been archived as a stand-alone application under [![DOI](https://zenodo.org/badge/292565762.svg)](https://zenodo.org/badge/latestdoi/292565762)[![GitHub license](https://badgen.net/badge/license/MIT/blue?)](https://github.com/KathrinBusch/16S-AmpliconCorePipeline/blob/master/LICENSE) [![Latest release](https://badgen.net/badge/release/v1.0.0/blue?)](https://github.com/KathrinBusch/16S-AmpliconCorePipeline/releases)
 <br />
